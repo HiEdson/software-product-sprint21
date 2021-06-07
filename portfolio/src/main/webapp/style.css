@@ -65,7 +65,10 @@ h2{
 h1, h2, h3{
   color: green;
   font-size: 25px; 
-  
+}
+
+img{
+    max-width:100%;
 }
 
 .intro1 {
