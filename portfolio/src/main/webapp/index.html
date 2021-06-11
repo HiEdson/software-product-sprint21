@@ -6,13 +6,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
+  <script src="fetch.js"></script>
   <title>Edson Casimiro</title>
   <!--adding google fonts and fontawesome-->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
 </head>
 
-<body>
+<body onload="quote();">
 
   <nav>
     <div class="logo">
@@ -58,6 +59,7 @@
 
     <div class="intro2">
       <h1><a href="/hello">Click here</a></h1> <!--h1 Edson casimiro h1-->
+      <p id="fetch"></p>
       <p>I am an undergraduate student in the Department of Computer Engineering at Istanbul University
         graduating in May 2023.
         previously, i studied high school in angola with the major in electricity, electronics and

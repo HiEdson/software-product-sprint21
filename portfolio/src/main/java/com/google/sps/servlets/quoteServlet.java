@@ -6,14 +6,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-/** Handles requests sent to the /hello URL. Try running a server and navigating to /hello! */
-@WebServlet("/hello")
-public class HelloWorldServlet extends HttpServlet {
+@WebServlet("/quoteSms")
+public class quoteServlet extends HttpServlet{
 
-  @Override
+@Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
     response.setContentType("text/html;");
-    response.getWriter().println("<h1>Hello there, Im Edson!</h1>");
+    response.getWriter().println("<h3>Hello there, this message comes from server through fetch request!</h3>");
   }
-}
-
+} 
