@@ -13,26 +13,26 @@ public class HelloWorldServlet extends HttpServlet {
 
   @Override
   public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-    ArrayList<String> thoughs = new ArrayList<String>();
-    thoughs.add("Everyone can fly, the problem is that we're not crazy enough for it!");
-    thoughs.add("Connecting devices, enable them to be smarter and less vulnerable");
-    thoughs.add("If you see what almost no one sees, you should do what almost no one does!");
+    ArrayList<String> thoughts = new ArrayList<>();
+    thoughts.add("Everyone can fly, the problem is that we're not crazy enough for it!");
+    thoughts.add("Connecting devices, enable them to be smarter and less vulnerable");
+    thoughts.add("If you see what almost no one sees, you should do what almost no one does!");
 
-    String toJson = convertToJson(thoughs);
+    String toJson = convertToJson(thoughts);
     response.setContentType("application/json;");
     response.getWriter().println(toJson);
   }
 
-  private String convertToJson(ArrayList<String> thoughs) {
+  private String convertToJson(ArrayList<String> thoughts) {
     String json = "{";
     json += "\"though1\": ";
-    json += "\"" + thoughs.get(0) + "\"";
+    json += "\"" + thoughts.get(0) + "\"";
     json += ", ";
     json += "\"though2\": ";
-    json += "\"" + thoughs.get(1) + "\"";
+    json += "\"" + thoughts.get(1) + "\"";
     json += ", ";
     json += "\"though3\": ";
-    json += "\"" + thoughs.get(2) + "\"";
+    json += "\"" + thoughts.get(2) + "\"";
     json += "}";
     return json;
   }
